@@ -45,4 +45,14 @@ public class ProductResource {
             throw new NotFoundException("Product not foud!");
         }
     }
+
+    @DELETE
+    @Path("{id}")
+    @Transactional
+    public void create(@PathParam("id") Long id){
+        Optional<Product> p = Product.findByIdOptional(id);
+        p.ifPresentOrElse(Product::delete, () -> {
+            throw new NotFoundException("Product not foud!");
+        });
+    }
 }
