@@ -22,13 +22,10 @@ public class ProductResource {
     @POST
     @Transactional
     public void create(ProductDTO productDTO){
-
         Product p = new Product();
         p.setName(productDTO.getName());
         p.setPrice(productDTO.getPrice());
-        //p.setCreateAt(new Date());
-        //p.setUpdatedAt(new Date());
-
+        
         Product.persist(p);
     }
 }
