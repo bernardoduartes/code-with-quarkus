@@ -10,10 +10,42 @@ import java.util.Date;
 
 @Entity
 public class Product extends PanacheEntity {
-    public String name;
-    public BigDecimal price;
+    private String name;
+    private BigDecimal price;
     @CreationTimestamp
-    public Date createAt;
+    private Date createAt;
     @UpdateTimestamp
-    public Date updatedAt;
+    private Date updatedAt;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public Date getCreateAt() {
+        return createAt;
+    }
+
+    public void setCreateAt(Date createAt) {
+        this.createAt = createAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 }
