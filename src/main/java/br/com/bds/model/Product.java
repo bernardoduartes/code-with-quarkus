@@ -2,6 +2,7 @@ package br.com.bds.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -9,6 +10,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
+@Table(name = "product")
 public class Product extends PanacheEntity {
     private String name;
     private BigDecimal price;
